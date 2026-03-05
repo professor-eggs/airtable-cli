@@ -5,7 +5,7 @@ class AirtableCli < Formula
   homepage "https://github.com/xavierlopez/airtable-cli"
   url "https://files.pythonhosted.org/packages/source/a/airtable-cli/airtable_cli-0.1.0.tar.gz"
   # Update sha256 after running: shasum -a 256 <downloaded.tar.gz>
-  sha256 "REPLACE_WITH_SHA256_AFTER_PYPI_PUBLISH"
+  sha256 "3ab0c38b1c2270e4e0a0a14f182f93b03e5c1e855e79d15e965d473507eb9247"
   license "MIT"
 
   depends_on "python@3.12"
