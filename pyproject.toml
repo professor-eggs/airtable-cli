@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "airtable-cli"
+version = "0.1.0"
+description = "A CLI tool to interact with the full Airtable Web API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "professor-eggs", email = "0xavier0@gmail.com" },
+]
+keywords = ["airtable", "cli", "api", "database", "no-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "typer>=0.12.0",
+    "httpx>=0.27.0",
+    "rich>=13.7.0",
+    "InquirerPy>=0.3.4",
+    "pydantic>=2.7.0",
+    "pyyaml>=6.0",
+    "tomli-w>=1.0.0",
+    "tomli>=2.0.0; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = "https://github.com/professor-eggs/airtable-cli"
+Repository = "https://github.com/professor-eggs/airtable-cli"
+"Bug Tracker" = "https://github.com/professor-eggs/airtable-cli/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-httpx>=0.30.0",
+    "pytest-mock>=3.14.0",
+]
+
+[project.scripts]
+airtable = "airtable_cli.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["airtable_cli"]
